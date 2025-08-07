@@ -9,13 +9,13 @@ jobs:
       - name: Github Info Printing
         run: |
           echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}'
-          echo 'Github Repository ${{github.repository}}' 
+          echo 'Github Repository url ${{github.repositoryUrl}}'
+          echo 'Github Repository runner id ${{github.runner_id}}'
+          echo 'Github Repository run number ${{github.run_nummber}}'
+          echo 'Github Repository run attempt ${{github.run_attempt}}'
+          echo 'Github Repository server url ${{github.server_url}}'
+          echo 'Github Repository token ${{github.token}}'
+          echo 'Github Repository action status ${{github.action_status}}'
+          echo 'Github Repository event name ${{github.event_name}}'
+          echo 'Github Repository actor${{github.actor}}' 
     
