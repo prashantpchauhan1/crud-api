@@ -1,0 +1,17 @@
+name: Matrix Example
+on: workflow_dispatch
+jobs:
+  matrix-jobs:
+    runs-on: ${{{matrix.os}}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+    steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.14.1
+        with:
+          distribution: 'temurin'
+          java-version: 21
+      - run: java -version
