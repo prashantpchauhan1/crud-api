@@ -1,0 +1,16 @@
+name: Variable Example
+
+on: 
+  workflow_dispatch
+env:
+  my_var: This is env variable
+jobs:
+  Variable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Env variable
+        run: echo 'printing env variable  ${{env.my_var}}'
+      - name: Repo variable
+        run: echo 'printing repo variable  ${{vars.my_var}}'
+      - name: Repo secret
+        run: echo 'printing repo secret  ${{secrets.my_secret}}'
