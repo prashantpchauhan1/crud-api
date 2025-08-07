@@ -1,0 +1,23 @@
+name: Needs Example
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      job1_id: ${{ steps.build_step.outputs.build_id }}
+    steps:
+      - name: Build
+        id: build_step
+        run: echo "build_id=$RANDOM" >> $GITHUB_OUTPUT
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "printing job1_id ${{ needs.job1.outputs.job1_id }}"
+  job3:
+    needs: [job1, job2]
+    runs-on: ubuntu-latest
+    if: ${{ failure() }}
+    steps:
+      - run: echo "Failed to job1 and job2"
