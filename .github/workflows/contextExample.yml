@@ -6,16 +6,16 @@ jobs:
   github_context:
     runs-on: ubuntu-latest
     steps:
-      -name: Github Info Printing
-      run: |
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}'
-        echo 'Github Repository ${{github.repository}}' 
+      - name: Github Info Printing
+        run: |
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}'
+          echo 'Github Repository ${{github.repository}}' 
     
